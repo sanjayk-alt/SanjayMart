@@ -14,7 +14,7 @@ RUN apt-get update \
         uuid-dev \
         zlib1g-dev \
         libsqlite3-dev \
-        default-libmysqlclient-dev \
+        libmysqlclient-dev \
         libcurl4-openssl-dev \
         libpq-dev \
     && rm -rf /var/lib/apt/lists/*
