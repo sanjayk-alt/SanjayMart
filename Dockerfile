@@ -11,6 +11,7 @@ RUN apt-get update \
         cmake \
         libdrogon-dev \
         libjsoncpp-dev \
+        uuid-dev \
         libcurl4-openssl-dev \
         libpq-dev \
     && rm -rf /var/lib/apt/lists/*
