@@ -998,6 +998,7 @@ public:
             "JOIN users u ON p.seller_id=u.id "
             "ORDER BY p.id"
         );
+
         if (PQresultStatus(result) != PGRES_TUPLES_OK)
         {
             std::string error = PQerrorMessage(conn);
@@ -1997,6 +1998,7 @@ public:
         }
 
         int changed = std::stoi(PQcmdTuples(result));
+
         PQclear(result);
         PQfinish(conn);
 
@@ -2995,6 +2997,7 @@ int main()
                 ));
                 return;
             }
+
             std::string answer;
             const Json::Value candidates = providerResponse["candidates"];
             if (candidates.isArray() && !candidates.empty() &&
