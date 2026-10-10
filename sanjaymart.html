@@ -1205,6 +1205,504 @@ footer {
 }
 </style>
 
+
+<style id="sanjaymart-role-specific-themes">
+/* Distinct visual identities for each SanjayMart workspace.
+   Styles are activated by whichever existing section is visible. */
+
+/* BUYER: warm editorial marketplace, forest green + oat */
+body:has(#productsSection:not(.hidden)),
+body:has(#cartSection:not(.hidden)),
+body:has(#buyerOrdersSection:not(.hidden)) {
+    --primary: #276749;
+    --primary-dark: #174a35;
+    --accent: #e9b96e;
+    --bg: #f6f4ec;
+    --surface: #fffdf7;
+    --surface-soft: #f5f2e8;
+    --text: #24382c;
+    --muted: #7a8578;
+    --border: #e6e2d6;
+    --shadow: 0 15px 32px rgba(45, 70, 48, .07);
+    background:
+        radial-gradient(ellipse at 5% 0%, rgba(214, 190, 133, .2), transparent 30rem),
+        #f6f4ec;
+    color: #24382c;
+}
+body:has(#productsSection:not(.hidden)) header,
+body:has(#cartSection:not(.hidden)) header,
+body:has(#buyerOrdersSection:not(.hidden)) header {
+    background: rgba(255, 253, 247, .94);
+    border-bottom: 1px solid #dedbcd;
+    box-shadow: 0 5px 20px rgba(46, 61, 41, .04);
+}
+body:has(#productsSection:not(.hidden)) header h2,
+body:has(#cartSection:not(.hidden)) header h2,
+body:has(#buyerOrdersSection:not(.hidden)) header h2 { color: #214e38; }
+body:has(#productsSection:not(.hidden)) header h2:before,
+body:has(#cartSection:not(.hidden)) header h2:before,
+body:has(#buyerOrdersSection:not(.hidden)) header h2:before {
+    content: "M";
+    border-radius: 50% 50% 12px 50%;
+    background: #276749;
+    box-shadow: 0 5px 14px rgba(39, 103, 73, .2);
+}
+body:has(#productsSection:not(.hidden)) header nav button,
+body:has(#cartSection:not(.hidden)) header nav button,
+body:has(#buyerOrdersSection:not(.hidden)) header nav button { color: #506b59; }
+body:has(#productsSection:not(.hidden)) header nav button:hover,
+body:has(#cartSection:not(.hidden)) header nav button:hover,
+body:has(#buyerOrdersSection:not(.hidden)) header nav button:hover {
+    background: #e9eee3;
+    color: #174a35;
+}
+body:has(#productsSection:not(.hidden)) #buyerNav button:first-child,
+body:has(#cartSection:not(.hidden)) #buyerNav button:nth-child(2),
+body:has(#buyerOrdersSection:not(.hidden)) #buyerNav button:nth-child(3) {
+    background: #e4ebdf;
+    color: #1e5c3d;
+}
+body:has(#productsSection:not(.hidden)) button,
+body:has(#cartSection:not(.hidden)) button,
+body:has(#buyerOrdersSection:not(.hidden)) button {
+    background: #276749;
+    box-shadow: 0 5px 12px rgba(39, 103, 73, .12);
+}
+body:has(#productsSection:not(.hidden)) button:hover,
+body:has(#cartSection:not(.hidden)) button:hover,
+body:has(#buyerOrdersSection:not(.hidden)) button:hover { background: #174a35; }
+body:has(#productsSection:not(.hidden)) .hero {
+    min-height: 315px;
+    border: 1px solid #234f3d;
+    border-radius: 7px 28px 7px 28px;
+    background: linear-gradient(112deg, #173d2c 0%, #285f43 64%, #467b54 100%);
+    box-shadow: 0 22px 44px rgba(33, 75, 47, .15);
+}
+body:has(#productsSection:not(.hidden)) .hero h1 {
+    max-width: 680px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(35px, 4.5vw, 56px);
+    font-weight: 500;
+    letter-spacing: -1.6px;
+    line-height: 1.08;
+}
+body:has(#productsSection:not(.hidden)) .hero .badge {
+    border-radius: 4px;
+    border-color: #91b39a;
+    background: #ffffff12;
+    color: #e4edce;
+    letter-spacing: 2px;
+}
+body:has(#productsSection:not(.hidden)) .hero-img { border-radius: 50% 50% 14px 50%; transform: rotate(-6deg); }
+body:has(#productsSection:not(.hidden)) .hero-img:before {
+    content: "✳";
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    color: #f4d79d;
+    background: #ffffff0e;
+    font-size: 58px;
+    font-weight: 400;
+}
+body:has(#productsSection:not(.hidden)) .toolbar {
+    border-color: #e1dece;
+    border-radius: 7px;
+    background: #fffdf7;
+    box-shadow: none;
+}
+body:has(#productsSection:not(.hidden)) .chip { border-radius: 5px; color: #687c69; }
+body:has(#productsSection:not(.hidden)) .chip.active { background: #276749; color: #fff; }
+body:has(#productsSection:not(.hidden)) .product {
+    border: 1px solid #e6e1d2;
+    border-radius: 6px 18px 6px 18px;
+    background: #fffdf7;
+    box-shadow: 0 5px 14px rgba(48, 62, 39, .025);
+}
+body:has(#productsSection:not(.hidden)) .product:hover {
+    border-color: #9cb99f;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 24px rgba(39, 82, 51, .08);
+}
+body:has(#productsSection:not(.hidden)) .product img {
+    border: 0;
+    border-radius: 4px 14px 4px 14px;
+    background: #f1efe4;
+}
+body:has(#productsSection:not(.hidden)) .product h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.3px;
+}
+body:has(#productsSection:not(.hidden)) .product .badge {
+    background: #e8eddf;
+    color: #356248;
+    border-radius: 3px;
+}
+body:has(#productsSection:not(.hidden)) .product .price { color: #245a3d; }
+body:has(#productsSection:not(.hidden)) .product .password-toggle {
+    background: #eff1e7;
+    color: #305f42;
+    box-shadow: none;
+}
+body:has(#cartSection:not(.hidden)) #cartSection .card,
+body:has(#buyerOrdersSection:not(.hidden)) #buyerOrdersSection > * {
+    border-color: #e1dece;
+    border-radius: 7px 22px 7px 22px;
+    background: #fffdf7;
+    box-shadow: 0 12px 32px rgba(45, 70, 48, .05);
+}
+body:has(#cartSection:not(.hidden)) #cartTotal { color: #276749; font-family: Georgia, serif; }
+body:has(#buyerOrdersSection:not(.hidden)) #buyerOrders > .card,
+body:has(#buyerOrdersSection:not(.hidden)) #buyerOrders > div { border-radius: 8px; border-left: 4px solid #94b39a; }
+
+/* SELLER: creative studio, violet + lilac with mint accents */
+body:has(#sellerSection:not(.hidden)),
+body:has(#sellerOrdersSection:not(.hidden)) {
+    --primary: #6741b8;
+    --primary-dark: #4d2d94;
+    --accent: #86e0c0;
+    --bg: #f2effa;
+    --surface: #ffffff;
+    --surface-soft: #f7f4ff;
+    --text: #30264a;
+    --muted: #807795;
+    --border: #e4ddf2;
+    --shadow: 0 16px 36px rgba(71, 44, 133, .08);
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(152, 125, 224, .17), transparent 33rem),
+        #f2effa;
+    color: #30264a;
+}
+body:has(#sellerSection:not(.hidden)) header,
+body:has(#sellerOrdersSection:not(.hidden)) header {
+    background: #241d38;
+    border-bottom: 1px solid #3e3457;
+    box-shadow: 0 8px 24px rgba(31, 23, 54, .16);
+}
+body:has(#sellerSection:not(.hidden)) header h2,
+body:has(#sellerOrdersSection:not(.hidden)) header h2 { color: #fff; }
+body:has(#sellerSection:not(.hidden)) header h2:before,
+body:has(#sellerOrdersSection:not(.hidden)) header h2:before {
+    content: "S";
+    border-radius: 12px 12px 12px 4px;
+    background: linear-gradient(145deg, #9778ea, #6845c0);
+    box-shadow: 0 0 0 4px #ffffff0b;
+}
+body:has(#sellerSection:not(.hidden)) header nav button,
+body:has(#sellerOrdersSection:not(.hidden)) header nav button { color: #cfc5e8; }
+body:has(#sellerSection:not(.hidden)) header nav button:hover,
+body:has(#sellerOrdersSection:not(.hidden)) header nav button:hover { background: #3b3152; color: #fff; }
+body:has(#sellerSection:not(.hidden)) #sellerNav button:first-child,
+body:has(#sellerOrdersSection:not(.hidden)) #sellerNav button:nth-child(2) { background: #493768; color: #fff; }
+body:has(#sellerSection:not(.hidden)) button,
+body:has(#sellerOrdersSection:not(.hidden)) button {
+    background: linear-gradient(135deg, #704bc2, #8865d7);
+    box-shadow: 0 6px 14px rgba(103, 65, 184, .14);
+}
+body:has(#sellerSection:not(.hidden)) button:hover,
+body:has(#sellerOrdersSection:not(.hidden)) button:hover { background: #4d2d94; }
+body:has(#sellerSection:not(.hidden)) .container h2,
+body:has(#sellerOrdersSection:not(.hidden)) .container h2 { color: #382454; }
+body:has(#sellerSection:not(.hidden)) #sellerSection > .card {
+    position: relative;
+    border: 1px solid #e4ddf2;
+    border-radius: 25px;
+    background: linear-gradient(150deg, #fff 0%, #fcfaff 100%);
+    box-shadow: 0 18px 44px rgba(71, 44, 133, .09);
+}
+body:has(#sellerSection:not(.hidden)) #sellerSection .seller-form-title {
+    border-bottom: 1px solid #eee8f8;
+}
+body:has(#sellerSection:not(.hidden)) #productFormTitle { font-size: 26px; letter-spacing: -1px; }
+body:has(#sellerSection:not(.hidden)) #sellerSection .seller-form-title:after {
+    content: "SELLER STUDIO";
+    order: -1;
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background: #eee8fb;
+    color: #6e4bb1;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+body:has(#sellerSection:not(.hidden)) #sellerSection input,
+body:has(#sellerSection:not(.hidden)) #sellerSection textarea { background: #faf8ff; border-color: #e4dcf4; }
+body:has(#sellerSection:not(.hidden)) #sellerSection input:focus,
+body:has(#sellerSection:not(.hidden)) #sellerSection textarea:focus { border-color: #9c82dd; box-shadow: 0 0 0 4px rgba(126, 89, 198, .11); }
+body:has(#sellerSection:not(.hidden)) .image-uploader {
+    border: 1px dashed #b8a6df;
+    border-radius: 17px;
+    background: #f7f3ff;
+}
+body:has(#sellerSection:not(.hidden)) .image-preview { border-color: #e1d7f5; background: #fff; }
+body:has(#sellerSection:not(.hidden)) #sellerProducts,
+body:has(#sellerSection:not(.hidden)) .seller-product-grid { gap: 19px; }
+body:has(#sellerSection:not(.hidden)) .seller-product-card {
+    border: 1px solid #e5def3;
+    border-radius: 21px 7px 21px 7px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(71, 44, 133, .055);
+}
+body:has(#sellerSection:not(.hidden)) .seller-product-card img { border-radius: 15px 5px 15px 5px; background: #f3effb; }
+body:has(#sellerSection:not(.hidden)) #cancelEditButton { background: #f9edf1; color: #a13d66; box-shadow: none; }
+body:has(#sellerOrdersSection:not(.hidden)) #sellerOrders > .card,
+body:has(#sellerOrdersSection:not(.hidden)) #sellerOrders > div {
+    border: 1px solid #e1d8f2;
+    border-left: 5px solid #a28ae1;
+    border-radius: 7px 18px 7px 18px;
+    background: #fff;
+    box-shadow: 0 9px 26px rgba(71, 44, 133, .06);
+}
+
+/* ADMIN: operations console, graphite + electric mint */
+body:has(#adminSection:not(.hidden)) {
+    --primary: #41d6ab;
+    --primary-dark: #1ab38b;
+    --accent: #f1bd69;
+    --bg: #121720;
+    --surface: #1b2330;
+    --surface-soft: #242e3e;
+    --text: #edf2f8;
+    --muted: #a0adbd;
+    --border: #303b4c;
+    --shadow: 0 20px 50px rgba(0, 0, 0, .16);
+    background: #121720;
+    color: #edf2f8;
+}
+body:has(#adminSection:not(.hidden)) header {
+    background: #0d121a;
+    border-bottom: 1px solid #2a3442;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+body:has(#adminSection:not(.hidden)) header h2 { color: #f3f6fa; }
+body:has(#adminSection:not(.hidden)) header h2:before {
+    content: "A";
+    border-radius: 9px;
+    color: #081a16;
+    background: #41d6ab;
+    box-shadow: 0 0 0 4px #41d6ab18;
+}
+body:has(#adminSection:not(.hidden)) header nav button { color: #b5c0ce; }
+body:has(#adminSection:not(.hidden)) header nav button:hover { background: #202b39; color: #fff; }
+body:has(#adminSection:not(.hidden)) #adminNav button:first-child { background: #19382f; color: #79edc9; }
+body:has(#adminSection:not(.hidden)) button {
+    background: #2ac29a;
+    color: #09251c;
+    box-shadow: none;
+}
+body:has(#adminSection:not(.hidden)) button:hover { background: #61e5bd; }
+body:has(#adminSection:not(.hidden)) #adminNav button:last-child { background: #3c2730; color: #ffb5c1; }
+body:has(#adminSection:not(.hidden)) .container h1,
+body:has(#adminSection:not(.hidden)) .container h2,
+body:has(#adminSection:not(.hidden)) .container h3 { color: #edf3fb; }
+body:has(#adminSection:not(.hidden)) #adminSection > h2 {
+    padding: 22px 26px;
+    border: 1px solid #2a3544;
+    border-left: 5px solid #41d6ab;
+    border-radius: 12px;
+    background: #1b2330;
+    font-size: 30px;
+}
+body:has(#adminSection:not(.hidden)) #adminSection > h2:after {
+    color: #96a5b8;
+    font-size: 13px;
+}
+body:has(#adminSection:not(.hidden)) #adminSection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+body:has(#adminSection:not(.hidden)) #adminSection > h2 { grid-column: 1 / -1; }
+body:has(#adminSection:not(.hidden)) #adminSection > .card {
+    padding: 21px;
+    border: 1px solid #2d3949;
+    border-radius: 12px;
+    background: #1b2330;
+    box-shadow: 0 13px 30px rgba(0,0,0,.1);
+}
+body:has(#adminSection:not(.hidden)) #adminSection > .card:first-of-type { grid-column: 1 / -1; }
+body:has(#adminSection:not(.hidden)) #adminSection > .card h3 {
+    color: #dce8f3;
+    letter-spacing: .1px;
+}
+body:has(#adminSection:not(.hidden)) #adminSection > .card h3:before {
+    width: 5px;
+    height: 17px;
+    border-radius: 2px;
+    background: #41d6ab;
+}
+body:has(#adminSection:not(.hidden)) .table-wrap { border-color: #344153; border-radius: 10px; }
+body:has(#adminSection:not(.hidden)) table { background: #1b2330; color: #d6dfeb; font-size: 12px; }
+body:has(#adminSection:not(.hidden)) th {
+    background: #293545;
+    color: #91a3b9;
+    border-color: #364356;
+    letter-spacing: .8px;
+}
+body:has(#adminSection:not(.hidden)) td { color: #d3dce7; border-color: #2c3849; }
+body:has(#adminSection:not(.hidden)) table tr:not(:first-child):hover td { background: #222d3c; }
+body:has(#adminSection:not(.hidden)) #adminSection p { color: #9cabbf; }
+body:has(#adminSection:not(.hidden)) footer { color: #78879a; background: #0d121a; border-color: #293442; }
+
+/* AUTH: midnight ink + warm amber, intentionally separate from dashboards */
+body:has(#loginSection:not(.hidden)),
+body:has(#registerSection:not(.hidden)),
+body:has(#forgotSection:not(.hidden)),
+body:has(#resetOtpSection:not(.hidden)),
+body:has(#resetPasswordSection:not(.hidden)),
+body:has(#otpSection:not(.hidden)) {
+    --primary: #cf6d35;
+    --primary-dark: #a94e20;
+    --accent: #f1bd69;
+    --bg: #171e2b;
+    --surface: #fffaf2;
+    --surface-soft: #fff2e3;
+    --text: #202b3a;
+    --muted: #7d8490;
+    --border: #eadcc9;
+    background:
+        radial-gradient(ellipse at 15% 12%, rgba(63, 87, 130, .34), transparent 29rem),
+        radial-gradient(ellipse at 88% 80%, rgba(209, 109, 53, .13), transparent 30rem),
+        #171e2b;
+    color: #fffaf2;
+}
+body:has(#loginSection:not(.hidden)) header,
+body:has(#registerSection:not(.hidden)) header,
+body:has(#forgotSection:not(.hidden)) header,
+body:has(#resetOtpSection:not(.hidden)) header,
+body:has(#resetPasswordSection:not(.hidden)) header,
+body:has(#otpSection:not(.hidden)) header {
+    background: #111722;
+    border-bottom-color: #2c3543;
+}
+body:has(#loginSection:not(.hidden)) header h2,
+body:has(#registerSection:not(.hidden)) header h2,
+body:has(#forgotSection:not(.hidden)) header h2,
+body:has(#resetOtpSection:not(.hidden)) header h2,
+body:has(#resetPasswordSection:not(.hidden)) header h2,
+body:has(#otpSection:not(.hidden)) header h2 { color: #fffaf2; }
+body:has(#loginSection:not(.hidden)) header h2:before,
+body:has(#registerSection:not(.hidden)) header h2:before,
+body:has(#forgotSection:not(.hidden)) header h2:before,
+body:has(#resetOtpSection:not(.hidden)) header h2:before,
+body:has(#resetPasswordSection:not(.hidden)) header h2:before,
+body:has(#otpSection:not(.hidden)) header h2:before {
+    content: "S";
+    background: #cf6d35;
+    color: #fff7eb;
+    border-radius: 8px 8px 8px 2px;
+    box-shadow: none;
+}
+body:has(#loginSection:not(.hidden)) header nav button,
+body:has(#registerSection:not(.hidden)) header nav button,
+body:has(#forgotSection:not(.hidden)) header nav button,
+body:has(#resetOtpSection:not(.hidden)) header nav button,
+body:has(#resetPasswordSection:not(.hidden)) header nav button,
+body:has(#otpSection:not(.hidden)) header nav button { color: #d0d6e0; }
+body:has(#loginSection:not(.hidden)) header nav button:first-child,
+body:has(#registerSection:not(.hidden)) header nav button:first-child { border-color: #465060; background: #202938; }
+body:has(#loginSection:not(.hidden)) header nav button:last-child,
+body:has(#registerSection:not(.hidden)) header nav button:last-child { background: #cf6d35; color: #fff; }
+body:has(#loginSection:not(.hidden)) .auth-box,
+body:has(#registerSection:not(.hidden)) .auth-box,
+body:has(#forgotSection:not(.hidden)) .auth-box,
+body:has(#resetOtpSection:not(.hidden)) .auth-box,
+body:has(#resetPasswordSection:not(.hidden)) .auth-box,
+body:has(#otpSection:not(.hidden)) .auth-box {
+    border: 1px solid #f0ddc5;
+    border-top: 5px solid #cf6d35;
+    border-radius: 8px 24px 8px 24px;
+    background: #fffaf2;
+    box-shadow: 0 26px 80px rgba(0,0,0,.24);
+}
+body:has(#loginSection:not(.hidden)) .auth-box:before,
+body:has(#registerSection:not(.hidden)) .auth-box:before,
+body:has(#forgotSection:not(.hidden)) .auth-box:before,
+body:has(#resetOtpSection:not(.hidden)) .auth-box:before,
+body:has(#resetPasswordSection:not(.hidden)) .auth-box:before,
+body:has(#otpSection:not(.hidden)) .auth-box:before {
+    padding: 6px 9px;
+    border-radius: 3px;
+    background: #fbe8d4;
+    color: #a95123;
+}
+body:has(#loginSection:not(.hidden)) .auth-box h2,
+body:has(#registerSection:not(.hidden)) .auth-box h2,
+body:has(#forgotSection:not(.hidden)) .auth-box h2,
+body:has(#resetOtpSection:not(.hidden)) .auth-box h2,
+body:has(#resetPasswordSection:not(.hidden)) .auth-box h2,
+body:has(#otpSection:not(.hidden)) .auth-box h2 {
+    color: #222d3b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 33px;
+    font-weight: 600;
+}
+body:has(#loginSection:not(.hidden)) button,
+body:has(#registerSection:not(.hidden)) button,
+body:has(#forgotSection:not(.hidden)) button,
+body:has(#resetOtpSection:not(.hidden)) button,
+body:has(#resetPasswordSection:not(.hidden)) button,
+body:has(#otpSection:not(.hidden)) button {
+    background: #cf6d35;
+    box-shadow: 0 6px 14px rgba(207,109,53,.16);
+}
+body:has(#loginSection:not(.hidden)) button:hover,
+body:has(#registerSection:not(.hidden)) button:hover,
+body:has(#forgotSection:not(.hidden)) button:hover,
+body:has(#resetOtpSection:not(.hidden)) button:hover,
+body:has(#resetPasswordSection:not(.hidden)) button:hover,
+body:has(#otpSection:not(.hidden)) button:hover { background: #a94e20; }
+body:has(#loginSection:not(.hidden)) .password-toggle,
+body:has(#registerSection:not(.hidden)) .password-toggle { background: #f5ebdf; color: #91502e; box-shadow: none; }
+body:has(#loginSection:not(.hidden)) footer,
+body:has(#registerSection:not(.hidden)) footer,
+body:has(#forgotSection:not(.hidden)) footer,
+body:has(#resetOtpSection:not(.hidden)) footer,
+body:has(#resetPasswordSection:not(.hidden)) footer,
+body:has(#otpSection:not(.hidden)) footer { border-color: #2c3543; background: #111722; color: #8792a4; }
+
+/* REVIEWS: soft coral editorial style rather than inheriting a generic panel */
+body:has(#reviewsSection:not(.hidden)) {
+    --primary: #bb5548;
+    --primary-dark: #90382d;
+    --accent: #e2a45c;
+    --bg: #fbf2ef;
+    --surface: #fffdfc;
+    --surface-soft: #fff4f0;
+    --text: #3b2b29;
+    --muted: #8d7773;
+    --border: #f0deda;
+    background:
+        radial-gradient(ellipse at 100% 5%, rgba(224, 155, 133, .2), transparent 27rem),
+        #fbf2ef;
+    color: #3b2b29;
+}
+body:has(#reviewsSection:not(.hidden)) header { background: rgba(255,253,252,.95); border-bottom-color: #f0deda; }
+body:has(#reviewsSection:not(.hidden)) header h2 { color: #733c35; }
+body:has(#reviewsSection:not(.hidden)) header h2:before { content: "R"; border-radius: 50%; background: #bb5548; box-shadow: none; }
+body:has(#reviewsSection:not(.hidden)) button { background: #bb5548; box-shadow: 0 5px 12px rgba(187,85,72,.12); }
+body:has(#reviewsSection:not(.hidden)) button:hover { background: #90382d; }
+body:has(#reviewsSection:not(.hidden)) #reviewsSection > .card { border-color: #f0deda; border-radius: 28px 8px 28px 8px; background: #fffdfc; }
+body:has(#reviewsSection:not(.hidden)) #reviewsProductTitle { font-family: Georgia, "Times New Roman", serif; font-size: 32px; color: #733c35; }
+body:has(#reviewsSection:not(.hidden)) #reviewForm { border-color: #f0deda; border-radius: 8px 20px 8px 20px; background: #fff4f0; }
+
+/* Mobile-specific adjustments for the theme-specific layouts */
+@media (max-width: 760px) {
+    body:has(#adminSection:not(.hidden)) #adminSection { grid-template-columns: minmax(0, 1fr); }
+    body:has(#adminSection:not(.hidden)) #adminSection > h2,
+    body:has(#adminSection:not(.hidden)) #adminSection > .card:first-of-type { grid-column: auto; }
+    body:has(#sellerSection:not(.hidden)) #sellerProducts,
+    body:has(#sellerSection:not(.hidden)) .seller-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+    body:has(#sellerSection:not(.hidden)) #sellerProducts,
+    body:has(#sellerSection:not(.hidden)) .seller-product-grid { grid-template-columns: minmax(0, 1fr); }
+    body:has(#adminSection:not(.hidden)) #adminSection > h2 { padding: 19px; font-size: 25px; }
+    body:has(#productsSection:not(.hidden)) .hero { border-radius: 5px 20px 5px 20px; }
+}
+</style>
+
 </head>
 <body>
 
