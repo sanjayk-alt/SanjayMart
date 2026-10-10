@@ -17,6 +17,7 @@ RUN apt-get update \
         libmariadb-dev-compat \
         libbrotli-dev \
         libhiredis-dev \
+        libyaml-cpp-dev \
         libcurl4-openssl-dev \
         libpq-dev \
     && rm -rf /var/lib/apt/lists/*
