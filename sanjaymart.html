@@ -997,7 +997,8 @@ async function api(url, options = {}) {
     const config = {
         method: options.method || "GET",
         headers: options.headers || {},
-        credentials: "same-origin"    };
+        credentials: "same-origin"
+    };
 
     if (options.body !== undefined) {
         config.headers["Content-Type"] = "application/json";
@@ -1996,7 +1997,8 @@ async function sendChatMessage(message) {
     input.disabled = true;
     const thinking = addChatBubble("Thinking…", "bot", "chat-thinking");
 
-    try {        const response = await fetch("/chatbot/ask", {
+    try {
+        const response = await fetch("/chatbot/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "same-origin",
