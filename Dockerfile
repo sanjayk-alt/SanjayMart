@@ -16,6 +16,7 @@ RUN apt-get update \
         libsqlite3-dev \
         libmariadb-dev-compat \
         libbrotli-dev \
+        libhiredis-dev \
         libcurl4-openssl-dev \
         libpq-dev \
     && rm -rf /var/lib/apt/lists/*
