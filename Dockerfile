@@ -10,6 +10,7 @@ RUN apt-get update \
         ca-certificates \
         cmake \
         libdrogon-dev \
+        libjsoncpp-dev \
         libcurl4-openssl-dev \
         libpq-dev \
     && rm -rf /var/lib/apt/lists/*
